@@ -1,0 +1,421 @@
+/**
+ * Rosé Pine Moon Adaptive Theme for Super Productivity
+ * Dark mode: Rosé Pine Moon
+ * Light mode: Rosé Pine Dawn
+ */
+
+/* Remove all shadows for clean aesthetic */
+* {
+  box-shadow: none !important;
+}
+
+/* Smooth transitions */
+:root {
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+}
+
+/* ===============================
+ * DARK MODE: ROSÉ PINE MOON
+ * ===============================*/
+
+body.isDarkTheme {
+  --rp-base: #232136;
+  --rp-surface: #2a273f;
+  --rp-overlay: #393552;
+  --rp-muted: #6e6a86;
+  --rp-subtle: #908caa;
+  --rp-text: #e0def4;
+
+  --rp-love: #eb6f92;
+  --rp-gold: #f6c177;
+  --rp-rose: #ea9a97;
+  --rp-pine: #3e8fb0;
+  --rp-foam: #9ccfd8;
+  --rp-iris: #c4a7e7;
+
+  --rp-highlight-low: #2a283e;
+  --rp-highlight-med: #44415a;
+  --rp-highlight-high: #56526e;
+
+  --bg: var(--rp-base);
+  --bg-darker: #1b192b;
+  --bg-slightly-lighter: var(--rp-surface);
+  --bg-lighter: var(--rp-overlay);
+  --bg-lightest: var(--rp-highlight-med);
+  --bg-super-light: var(--rp-highlight-high);
+
+  --card-bg: var(--rp-surface);
+  --sidenav-bg: #1b192b;
+  --selected-task-bg-color: var(--rp-overlay);
+  --banner-bg: var(--rp-overlay);
+
+  --task-c-bg: var(--rp-surface);
+  --task-c-selected-bg: var(--rp-overlay);
+  --sub-task-c-bg: #242238;
+  --sub-task-c-bg-done: #1b192b;
+  --task-c-bg-done: #1b192b;
+  --task-c-current-bg: var(--rp-highlight-med);
+  --task-c-drag-drop-bg: var(--rp-highlight-med);
+  --sub-task-c-bg-in-selected: #302d49;
+
+  --standard-note-bg: var(--rp-surface);
+  --standard-note-bg-hovered: var(--rp-overlay);
+
+  --text-color: var(--rp-text);
+  --text-color-less-intense: rgba(224, 222, 244, 0.87);
+  --text-color-muted: var(--rp-subtle);
+  --text-color-more-intense: #f4f2ff;
+  --text-color-most-intense: #ffffff;
+
+  --standard-note-fg: var(--rp-text);
+  --task-detail-value-color: rgba(224, 222, 244, 0.7);
+
+  --extra-border-color: #1b192b;
+  --separator-color: rgba(68, 65, 90, 0.45);
+  --divider-color: #1b192b;
+  --chip-outline-color: rgba(224, 222, 244, 0.23);
+
+  --scrollbar-thumb: var(--rp-highlight-med);
+  --scrollbar-thumb-hover: var(--rp-highlight-high);
+  --scrollbar-track: var(--rp-base);
+
+  --attachment-bg: var(--rp-surface);
+  --attachment-border: transparent;
+  --attachment-control-bg: rgba(0, 0, 0, 0.3);
+  --attachment-control-border: transparent;
+  --attachment-control-hover-bg: rgba(0, 0, 0, 0.7);
+
+  --grid-color: rgba(224, 222, 244, 0.06);
+  --progress-bg: rgba(224, 222, 244, 0.12);
+  --c-backdrop: rgba(0, 0, 0, 0.45);
+}
+
+/* ===============================
+ * LIGHT MODE: ROSÉ PINE DAWN
+ * ===============================*/
+
+body:not(.isDarkTheme) {
+  --rp-base: #faf4ed;
+  --rp-surface: #fffaf3;
+  --rp-overlay: #f2e9e1;
+  --rp-muted: #9893a5;
+  --rp-subtle: #797593;
+  --rp-text: #575279;
+
+  --rp-love: #b4637a;
+  --rp-gold: #ea9d34;
+  --rp-rose: #d7827e;
+  --rp-pine: #286983;
+  --rp-foam: #56949f;
+  --rp-iris: #907aa9;
+
+  --rp-highlight-low: #f4ede8;
+  --rp-highlight-med: #dfdad9;
+  --rp-highlight-high: #cecacd;
+
+  --bg: var(--rp-base);
+  --bg-darker: var(--rp-overlay);
+  --bg-slightly-lighter: var(--rp-highlight-low);
+  --bg-lighter: var(--rp-surface);
+  --bg-lightest: var(--rp-surface);
+  --bg-super-light: var(--rp-surface);
+
+  --card-bg: var(--rp-surface);
+  --sidenav-bg: var(--rp-overlay);
+  --selected-task-bg-color: var(--rp-highlight-low);
+  --banner-bg: var(--rp-highlight-low);
+
+  --task-c-bg: var(--rp-surface);
+  --task-c-selected-bg: var(--rp-highlight-low);
+  --sub-task-c-bg: var(--rp-surface);
+  --sub-task-c-bg-done: var(--rp-base);
+  --task-c-bg-done: var(--rp-base);
+  --task-c-current-bg: var(--rp-highlight-med);
+  --task-c-drag-drop-bg: var(--rp-highlight-med);
+  --sub-task-c-bg-in-selected: var(--rp-overlay);
+
+  --standard-note-bg: var(--rp-surface);
+  --standard-note-bg-hovered: var(--rp-overlay);
+
+  --text-color: var(--rp-text);
+  --text-color-less-intense: rgba(87, 82, 121, 0.87);
+  --text-color-muted: rgba(87, 82, 121, 0.56);
+  --text-color-more-intense: #3f3a5f;
+  --text-color-most-intense: #2f2a4a;
+
+  --standard-note-fg: var(--rp-text);
+  --task-detail-value-color: rgba(87, 82, 121, 0.72);
+
+  --extra-border-color: var(--rp-highlight-med);
+  --separator-color: rgba(206, 202, 205, 0.7);
+  --divider-color: var(--rp-highlight-med);
+  --chip-outline-color: rgba(87, 82, 121, 0.23);
+
+  --scrollbar-thumb: var(--rp-highlight-high);
+  --scrollbar-thumb-hover: var(--rp-subtle);
+  --scrollbar-track: var(--rp-base);
+
+  --attachment-bg: var(--rp-surface);
+  --attachment-border: var(--rp-highlight-med);
+  --attachment-control-bg: rgba(255, 250, 243, 0.8);
+  --attachment-control-border: var(--rp-highlight-med);
+  --attachment-control-hover-bg: rgba(255, 250, 243, 0.95);
+
+  --grid-color: rgba(87, 82, 121, 0.08);
+  --progress-bg: rgba(87, 82, 121, 0.12);
+  --c-backdrop: rgba(47, 42, 74, 0.35);
+}
+
+/* ===============================
+ * SUPER PRODUCTIVITY THEME CONTRACT
+ * =============================== */
+
+body,
+body.isDarkTheme,
+body:not(.isDarkTheme) {
+  --surface-0: var(--bg-darker);
+  --surface-1: var(--bg);
+  --surface-2: var(--card-bg);
+  --surface-3: var(--bg-lighter);
+  --surface-4: var(--bg-lightest);
+
+  --ink: var(--text-color);
+  --ink-strong: var(--text-color-most-intense);
+  --ink-muted: var(--text-color-muted);
+  --ink-on-channel: var(--text-color-most-intense);
+
+  --accent: var(--c-accent);
+  --accent-hover: var(--palette-accent-400);
+  --accent-active: var(--palette-accent-600);
+  --accent-ink: var(--rp-base);
+
+  --success: var(--c-success);
+  --warning: var(--c-warning);
+  --danger: var(--c-error);
+  --info: var(--c-info);
+
+  --border: var(--extra-border-color);
+  --separator: var(--separator-color);
+  --divider: var(--divider-color);
+  --scrim: var(--c-backdrop);
+}
+
+/* ===============================
+ * SHARED ROSÉ PINE VARIABLES
+ * ===============================*/
+
+body {
+  --palette-accent-500: var(--rp-iris);
+  --c-accent: var(--rp-iris);
+  --c-primary: var(--rp-iris);
+
+  --palette-accent-100: #eadff7;
+  --palette-accent-200: #decdf2;
+  --palette-accent-300: #d2baee;
+  --palette-accent-400: #caaeea;
+  --palette-accent-600: #ac8ed8;
+  --palette-accent-700: #9877ca;
+  --palette-accent-800: #8060b3;
+  --palette-accent-900: #654993;
+
+  --c-success: var(--rp-foam);
+  --c-warning: var(--rp-gold);
+  --c-error: var(--rp-love);
+  --c-info: var(--rp-pine);
+
+  --close-btn-bg: var(--rp-overlay);
+  --close-btn-border: transparent;
+
+  --select-hover-bg: rgba(196, 167, 231, 0.12);
+  --options-border-color: rgba(196, 167, 231, 0.2);
+
+  --improvement-text: var(--text-color-most-intense);
+  --improvement-border: rgba(196, 167, 231, 0.3);
+  --improvement-button-text: var(--text-color-most-intense);
+
+  --shadow-key-umbra-opacity: 0;
+  --shadow-key-penumbra-opacity: 0;
+  --shadow-ambient-shadow-opacity: 0;
+  --task-current-shadow: none;
+  --task-selected-shadow: none;
+
+  --hover-controls-border: none;
+  --hover-controls-border-opacity: 0;
+
+  --hover-bg-opacity: 0.04;
+  --focus-bg-opacity: 0.08;
+  --pressed-bg-opacity: 0.12;
+  --disabled-opacity: 0.38;
+
+  --mat-theme-surface: var(--card-bg);
+  --mat-theme-on-surface: var(--text-color);
+  --mat-theme-background: var(--bg);
+  --mat-theme-primary: var(--rp-iris);
+
+  --mat-app-background-color: var(--bg);
+  --mat-app-text-color: var(--text-color);
+}
+
+/* Hide gradient backgrounds */
+body::before,
+body .first-line:hover .hover-controls::before {
+  display: none !important;
+}
+
+/* Apply background and text colors */
+body {
+  background-color: var(--bg);
+  color: var(--text-color);
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+body .page-wrapper {
+  color: var(--text-color);
+}
+
+/* Links */
+a,
+body a[href] {
+  color: var(--c-accent);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+a:hover,
+body a[href]:hover {
+  opacity: 0.8;
+}
+
+/* Smooth hover states */
+.task-c:hover,
+.sub-task-c:hover {
+  background-color: var(--task-c-selected-bg);
+  transition: background-color var(--transition-fast);
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+/* Text reset */
+body,
+body .page-wrapper,
+body .task-c,
+body .sub-task-c,
+body mat-card,
+body .mat-mdc-card,
+body .mat-mdc-list-item,
+body .mat-mdc-menu-item,
+body .mat-mdc-option,
+body .mat-mdc-form-field,
+body .mat-mdc-select-value,
+body .mat-mdc-input-element,
+body .mdc-list-item__primary-text,
+body .mdc-button__label {
+  color: var(--text-color);
+}
+
+/* Muted text */
+body .secondary-text,
+body .muted,
+body .help-text,
+body .hint,
+body .mat-mdc-form-field-hint,
+body .mat-mdc-card-subtitle,
+body .mdc-list-item__secondary-text {
+  color: var(--text-color-muted);
+}
+
+/* Icons */
+body mat-icon,
+body .mat-icon {
+  color: var(--text-color-muted);
+}
+
+/* Inputs */
+body input,
+body textarea,
+body select {
+  color: var(--text-color);
+}
+
+body input::placeholder,
+body textarea::placeholder {
+  color: var(--text-color-muted);
+}
+
+/* Completed tasks */
+body .isDone,
+body .done,
+body .task-done,
+body .task.done {
+  color: var(--text-color-muted);
+}
+
+body .isDone .task-title,
+body .done .task-title,
+body .task-done .task-title {
+  color: var(--text-color-muted);
+}
+
+/* Code blocks */
+code,
+pre {
+  background-color: var(--rp-overlay);
+  color: var(--rp-text);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* Scrollbars */
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Optional Rosé Pine utility classes */
+.rp-love {
+  color: var(--rp-love);
+}
+
+.rp-gold {
+  color: var(--rp-gold);
+}
+
+.rp-rose {
+  color: var(--rp-rose);
+}
+
+.rp-pine {
+  color: var(--rp-pine);
+}
+
+.rp-foam {
+  color: var(--rp-foam);
+}
+
+.rp-iris {
+  color: var(--rp-iris);
+}
