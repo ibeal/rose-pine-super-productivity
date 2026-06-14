@@ -17,5 +17,5 @@ jobs:
         with:
           node-version: 24
 
-      - name: Verify built themes are in sync with src/
-        run: npm run check
+      - name: Build themes
+        run: npm run build

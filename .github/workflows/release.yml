@@ -27,6 +27,6 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: |
-            rose-pine.css
-            rose-pine-moon.css
+            dist/rose-pine.css
+            dist/rose-pine-moon.css
           generate_release_notes: true

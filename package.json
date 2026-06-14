@@ -6,7 +6,6 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "check": "node scripts/build.mjs && git diff --exit-code -- rose-pine.css rose-pine-moon.css"
+    "build": "node scripts/build.mjs"
   }
 }

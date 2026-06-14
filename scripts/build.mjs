@@ -10,12 +10,13 @@
  *   5. src/contract.css    (theme contract + shared vars + rules, shared)
  */
 
-import { readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const src = join(root, 'src');
+const dist = join(root, 'dist');
 
 /** The two distributable themes and how they are composed. */
 const TARGETS = [
@@ -55,11 +56,13 @@ async function build() {
     read('contract.css'),
   ]);
 
+  await mkdir(dist, { recursive: true });
+
   for (const target of TARGETS) {
     const dark = await read('themes', `${target.dark}.css`);
     const css = [header(target), base, dark, dawn, contract].join('\n\n') + '\n';
-    await writeFile(join(root, target.output), css, 'utf8');
-    console.log(`built ${target.output}`);
+    await writeFile(join(dist, target.output), css, 'utf8');
+    console.log(`built dist/${target.output}`);
   }
 }
 

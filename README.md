@@ -7,7 +7,7 @@
 
 ## Usage
 
-1. Download the desired theme:
+1. Download the desired theme from the [latest release](https://github.com/ibeal/rose-pine-super-productivity/releases/latest):
     - `rose-pine.css`
     - `rose-pine-moon.css`
 2. Open Super Productivity
@@ -73,10 +73,8 @@ These themes use Super Productivity’s experimental theme upload feature. Super
 
 ## Contributing
 
-The distributable theme files are generated and should not be edited by hand:
-
-- `rose-pine.css`
-- `rose-pine-moon.css`
+The distributable theme files (`rose-pine.css`, `rose-pine-moon.css`) are generated
+into `dist/` and are not committed — they are published as release assets instead.
 
 Edit the source partials in `src/` instead:
 
@@ -94,11 +92,10 @@ Each output is assembled as `base + <dark theme> + dawn + contract`:
 ### Building
 
 ```sh
-npm run build      # regenerate the two theme files from src/
-npm run check      # build and fail if the committed files are out of date
+npm run build      # generate the two theme files into dist/ (gitignored)
 ```
 
-Commit the regenerated `rose-pine.css` / `rose-pine-moon.css` alongside your `src/` changes.
+Commit only your `src/` changes; the build output in `dist/` is not tracked.
 
 When contributing, please test both Super Productivity modes:
 
