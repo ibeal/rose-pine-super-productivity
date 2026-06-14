@@ -76,22 +76,32 @@ These themes use Super Productivity’s experimental theme upload feature. Super
 The distributable theme files (`rose-pine.css`, `rose-pine-moon.css`) are generated
 into `dist/` and are not committed — they are published as release assets instead.
 
-Edit the source partials in `src/` instead:
+Edit the source files in `src/` instead:
 
+- `src/template.css` — the unified contract: one set of `body` variable
+  declarations whose values are [Rosé Pine palette](https://github.com/rose-pine/palette)
+  variables (`$base`, `$rose`, …) and per-variant values (`$(main|moon|dawn)`).
 - `src/base.css` — shadow reset and transitions (shared)
-- `src/themes/main.css` — Rosé Pine dark palette
-- `src/themes/moon.css` — Rosé Pine Moon dark palette
-- `src/themes/dawn.css` — Rosé Pine Dawn light palette (shared by both themes)
 - `src/contract.css` — Super Productivity theme contract, shared variables and rules
 
-Each output is assembled as `base + <dark theme> + dawn + contract`:
+`src/template.css` is run through [`@rose-pine/build`](https://github.com/rose-pine/build),
+which resolves it into one palette block per variant (`rose-pine`, `rose-pine-moon`,
+`rose-pine-dawn`). `build.mjs` then assembles each adaptive theme as
+`base + <dark variant block> + dawn block + contract`:
 
-- `rose-pine.css` = `main` + `dawn`
-- `rose-pine-moon.css` = `moon` + `dawn`
+- `rose-pine.css` = Main dark block + Dawn light block
+- `rose-pine-moon.css` = Moon dark block + Dawn light block
+
+The `$(main|moon|dawn)` syntax maps to `(dark|dark|light)` for us, so a single
+template produces all three blocks. A few variables that differ in form between
+dark and light (rather than just by palette) are normalised to an equivalent
+value — e.g. the dark muted text `var(--rp-subtle)` becomes its literal
+`rgba(...)`. The rendered colors are unchanged.
 
 ### Building
 
 ```sh
+npm install        # once, to install @rose-pine/build
 npm run build      # generate the two theme files into dist/ (gitignored)
 ```
 

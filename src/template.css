@@ -1,0 +1,69 @@
+  --rp-base: $base;
+  --rp-surface: $surface;
+  --rp-overlay: $overlay;
+  --rp-muted: $muted;
+  --rp-subtle: $subtle;
+  --rp-text: $text;
+
+  --rp-love: $love;
+  --rp-gold: $gold;
+  --rp-rose: $rose;
+  --rp-pine: $pine;
+  --rp-foam: $foam;
+  --rp-iris: $iris;
+
+  --rp-highlight-low: $highlightLow;
+  --rp-highlight-med: $highlightMed;
+  --rp-highlight-high: $highlightHigh;
+
+  --bg: var(--rp-base);
+  --bg-darker: $(#13111d|#1b192b|#f2e9e1);
+  --bg-slightly-lighter: var(--rp-$(surface|surface|highlight-low));
+  --bg-lighter: var(--rp-$(overlay|overlay|surface));
+  --bg-lightest: var(--rp-$(highlight-med|highlight-med|surface));
+  --bg-super-light: var(--rp-$(highlight-high|highlight-high|surface));
+
+  --card-bg: var(--rp-surface);
+  --sidenav-bg: $(#13111d|#1b192b|#f2e9e1);
+  --selected-task-bg-color: var(--rp-$(overlay|overlay|highlight-low));
+  --banner-bg: var(--rp-$(overlay|overlay|highlight-low));
+
+  --task-c-bg: var(--rp-surface);
+  --task-c-selected-bg: var(--rp-$(overlay|overlay|highlight-low));
+  --sub-task-c-bg: $(#1b1928|#242238|#fffaf3);
+  --sub-task-c-bg-done: $(#13111d|#1b192b|#faf4ed);
+  --task-c-bg-done: $(#13111d|#1b192b|#faf4ed);
+  --task-c-current-bg: var(--rp-highlight-med);
+  --task-c-drag-drop-bg: var(--rp-highlight-med);
+  --sub-task-c-bg-in-selected: $(#242135|#302d49|#f2e9e1);
+
+  --standard-note-bg: var(--rp-surface);
+  --standard-note-bg-hovered: var(--rp-overlay);
+
+  --text-color: var(--rp-text);
+  --text-color-less-intense: rgba($(224, 222, 244|224, 222, 244|87, 82, 121), 0.87);
+  --text-color-muted: rgba($(144, 140, 170|144, 140, 170|87, 82, 121), $(1|1|0.56));
+  --text-color-more-intense: $(#f4f2ff|#f4f2ff|#3f3a5f);
+  --text-color-most-intense: $(#ffffff|#ffffff|#2f2a4a);
+
+  --standard-note-fg: var(--rp-text);
+  --task-detail-value-color: rgba($(224, 222, 244|224, 222, 244|87, 82, 121), $(0.7|0.7|0.72));
+
+  --extra-border-color: $(#13111d|#1b192b|#dfdad9);
+  --separator-color: rgba($(64, 61, 82|68, 65, 90|206, 202, 205), $(0.45|0.45|0.7));
+  --divider-color: $(#13111d|#1b192b|#dfdad9);
+  --chip-outline-color: rgba($(224, 222, 244|224, 222, 244|87, 82, 121), 0.23);
+
+  --scrollbar-thumb: var(--rp-$(highlight-med|highlight-med|highlight-high));
+  --scrollbar-thumb-hover: var(--rp-$(highlight-high|highlight-high|subtle));
+  --scrollbar-track: var(--rp-base);
+
+  --attachment-bg: var(--rp-surface);
+  --attachment-border: $(transparent|transparent|#dfdad9);
+  --attachment-control-bg: rgba($(0, 0, 0|0, 0, 0|255, 250, 243), $(0.3|0.3|0.8));
+  --attachment-control-border: $(transparent|transparent|#dfdad9);
+  --attachment-control-hover-bg: rgba($(0, 0, 0|0, 0, 0|255, 250, 243), $(0.7|0.7|0.95));
+
+  --grid-color: rgba($(224, 222, 244|224, 222, 244|87, 82, 121), $(0.06|0.06|0.08));
+  --progress-bg: rgba($(224, 222, 244|224, 222, 244|87, 82, 121), 0.12);
+  --c-backdrop: rgba($(0, 0, 0|0, 0, 0|47, 42, 74), $(0.45|0.45|0.35));
