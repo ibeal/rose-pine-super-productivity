@@ -56,15 +56,15 @@ These themes use Super Productivity’s experimental theme upload feature. Super
 
 ### Rosé Pine
 
-<img width="256" alt="Rosé Pine with Super Productivity" src="https://github.com/user-attachments/assets/3d9df6a3-0ee3-43f2-b934-83cf8f2806c2" />
+<img width="256" alt="Rosé Pine with Super Productivity" src="assets/screenshot-main.png" />
 
 ### Rosé Pine Moon
 
-<img width="256" alt="Rosé Pine Moon with Super Productivity" src="https://github.com/user-attachments/assets/0acf279b-492c-4d75-acba-9de1d6cc8fcb" />
+<img width="256" alt="Rosé Pine Moon with Super Productivity" src="assets/screenshot-moon.png" />
 
 ### Rosé Pine Dawn
 
-<img width="256" alt="Rosé Pine Dawn with Super Productivity" src="https://github.com/user-attachments/assets/fb1b1d16-55e8-45db-b388-7c25250b8022" />
+<img width="256" alt="Rosé Pine Dawn with Super Productivity" src="assets/screenshot-dawn.png" />
 
 ## Thanks to
 
