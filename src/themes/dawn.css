@@ -1,0 +1,75 @@
+/* ===============================
+ * LIGHT MODE: ROSÉ PINE DAWN
+ * ===============================*/
+
+body:not(.isDarkTheme) {
+  --rp-base: #faf4ed;
+  --rp-surface: #fffaf3;
+  --rp-overlay: #f2e9e1;
+  --rp-muted: #9893a5;
+  --rp-subtle: #797593;
+  --rp-text: #575279;
+
+  --rp-love: #b4637a;
+  --rp-gold: #ea9d34;
+  --rp-rose: #d7827e;
+  --rp-pine: #286983;
+  --rp-foam: #56949f;
+  --rp-iris: #907aa9;
+
+  --rp-highlight-low: #f4ede8;
+  --rp-highlight-med: #dfdad9;
+  --rp-highlight-high: #cecacd;
+
+  --bg: var(--rp-base);
+  --bg-darker: var(--rp-overlay);
+  --bg-slightly-lighter: var(--rp-highlight-low);
+  --bg-lighter: var(--rp-surface);
+  --bg-lightest: var(--rp-surface);
+  --bg-super-light: var(--rp-surface);
+
+  --card-bg: var(--rp-surface);
+  --sidenav-bg: var(--rp-overlay);
+  --selected-task-bg-color: var(--rp-highlight-low);
+  --banner-bg: var(--rp-highlight-low);
+
+  --task-c-bg: var(--rp-surface);
+  --task-c-selected-bg: var(--rp-highlight-low);
+  --sub-task-c-bg: var(--rp-surface);
+  --sub-task-c-bg-done: var(--rp-base);
+  --task-c-bg-done: var(--rp-base);
+  --task-c-current-bg: var(--rp-highlight-med);
+  --task-c-drag-drop-bg: var(--rp-highlight-med);
+  --sub-task-c-bg-in-selected: var(--rp-overlay);
+
+  --standard-note-bg: var(--rp-surface);
+  --standard-note-bg-hovered: var(--rp-overlay);
+
+  --text-color: var(--rp-text);
+  --text-color-less-intense: rgba(87, 82, 121, 0.87);
+  --text-color-muted: rgba(87, 82, 121, 0.56);
+  --text-color-more-intense: #3f3a5f;
+  --text-color-most-intense: #2f2a4a;
+
+  --standard-note-fg: var(--rp-text);
+  --task-detail-value-color: rgba(87, 82, 121, 0.72);
+
+  --extra-border-color: var(--rp-highlight-med);
+  --separator-color: rgba(206, 202, 205, 0.7);
+  --divider-color: var(--rp-highlight-med);
+  --chip-outline-color: rgba(87, 82, 121, 0.23);
+
+  --scrollbar-thumb: var(--rp-highlight-high);
+  --scrollbar-thumb-hover: var(--rp-subtle);
+  --scrollbar-track: var(--rp-base);
+
+  --attachment-bg: var(--rp-surface);
+  --attachment-border: var(--rp-highlight-med);
+  --attachment-control-bg: rgba(255, 250, 243, 0.8);
+  --attachment-control-border: var(--rp-highlight-med);
+  --attachment-control-hover-bg: rgba(255, 250, 243, 0.95);
+
+  --grid-color: rgba(87, 82, 121, 0.08);
+  --progress-bg: rgba(87, 82, 121, 0.12);
+  --c-backdrop: rgba(47, 42, 74, 0.35);
+}

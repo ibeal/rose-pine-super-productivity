@@ -1,0 +1,10 @@
+/* Remove all shadows for clean aesthetic */
+* {
+  box-shadow: none !important;
+}
+
+/* Smooth transitions */
+:root {
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "rose-pine-super-productivity",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Rosé Pine themes for Super Productivity",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs && git diff --exit-code -- rose-pine.css rose-pine-moon.css"
+  }
+}

@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build themes
+        run: npm run build
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            rose-pine.css
+            rose-pine-moon.css
+          generate_release_notes: true

@@ -73,10 +73,32 @@ These themes use Super Productivity’s experimental theme upload feature. Super
 
 ## Contributing
 
-The theme files are:
+The distributable theme files are generated and should not be edited by hand:
 
 - `rose-pine.css`
 - `rose-pine-moon.css`
+
+Edit the source partials in `src/` instead:
+
+- `src/base.css` — shadow reset and transitions (shared)
+- `src/themes/main.css` — Rosé Pine dark palette
+- `src/themes/moon.css` — Rosé Pine Moon dark palette
+- `src/themes/dawn.css` — Rosé Pine Dawn light palette (shared by both themes)
+- `src/contract.css` — Super Productivity theme contract, shared variables and rules
+
+Each output is assembled as `base + <dark theme> + dawn + contract`:
+
+- `rose-pine.css` = `main` + `dawn`
+- `rose-pine-moon.css` = `moon` + `dawn`
+
+### Building
+
+```sh
+npm run build      # regenerate the two theme files from src/
+npm run check      # build and fail if the committed files are out of date
+```
+
+Commit the regenerated `rose-pine.css` / `rose-pine-moon.css` alongside your `src/` changes.
 
 When contributing, please test both Super Productivity modes:
 
@@ -84,3 +106,13 @@ When contributing, please test both Super Productivity modes:
 - Dark mode
 
 Each theme should support both modes in the same file.
+
+## Releases
+
+Pushing a `v#.#.#` tag triggers the release workflow, which rebuilds the themes
+from `src/` and attaches `rose-pine.css` and `rose-pine-moon.css` to a GitHub Release.
+
+```sh
+jj bookmark set main -r @        # or however you publish main
+git tag v1.0.0 && git push origin v1.0.0
+```

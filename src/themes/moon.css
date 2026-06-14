@@ -1,0 +1,75 @@
+/* ===============================
+ * DARK MODE: ROSÉ PINE MOON
+ * ===============================*/
+
+body.isDarkTheme {
+  --rp-base: #232136;
+  --rp-surface: #2a273f;
+  --rp-overlay: #393552;
+  --rp-muted: #6e6a86;
+  --rp-subtle: #908caa;
+  --rp-text: #e0def4;
+
+  --rp-love: #eb6f92;
+  --rp-gold: #f6c177;
+  --rp-rose: #ea9a97;
+  --rp-pine: #3e8fb0;
+  --rp-foam: #9ccfd8;
+  --rp-iris: #c4a7e7;
+
+  --rp-highlight-low: #2a283e;
+  --rp-highlight-med: #44415a;
+  --rp-highlight-high: #56526e;
+
+  --bg: var(--rp-base);
+  --bg-darker: #1b192b;
+  --bg-slightly-lighter: var(--rp-surface);
+  --bg-lighter: var(--rp-overlay);
+  --bg-lightest: var(--rp-highlight-med);
+  --bg-super-light: var(--rp-highlight-high);
+
+  --card-bg: var(--rp-surface);
+  --sidenav-bg: #1b192b;
+  --selected-task-bg-color: var(--rp-overlay);
+  --banner-bg: var(--rp-overlay);
+
+  --task-c-bg: var(--rp-surface);
+  --task-c-selected-bg: var(--rp-overlay);
+  --sub-task-c-bg: #242238;
+  --sub-task-c-bg-done: #1b192b;
+  --task-c-bg-done: #1b192b;
+  --task-c-current-bg: var(--rp-highlight-med);
+  --task-c-drag-drop-bg: var(--rp-highlight-med);
+  --sub-task-c-bg-in-selected: #302d49;
+
+  --standard-note-bg: var(--rp-surface);
+  --standard-note-bg-hovered: var(--rp-overlay);
+
+  --text-color: var(--rp-text);
+  --text-color-less-intense: rgba(224, 222, 244, 0.87);
+  --text-color-muted: var(--rp-subtle);
+  --text-color-more-intense: #f4f2ff;
+  --text-color-most-intense: #ffffff;
+
+  --standard-note-fg: var(--rp-text);
+  --task-detail-value-color: rgba(224, 222, 244, 0.7);
+
+  --extra-border-color: #1b192b;
+  --separator-color: rgba(68, 65, 90, 0.45);
+  --divider-color: #1b192b;
+  --chip-outline-color: rgba(224, 222, 244, 0.23);
+
+  --scrollbar-thumb: var(--rp-highlight-med);
+  --scrollbar-thumb-hover: var(--rp-highlight-high);
+  --scrollbar-track: var(--rp-base);
+
+  --attachment-bg: var(--rp-surface);
+  --attachment-border: transparent;
+  --attachment-control-bg: rgba(0, 0, 0, 0.3);
+  --attachment-control-border: transparent;
+  --attachment-control-hover-bg: rgba(0, 0, 0, 0.7);
+
+  --grid-color: rgba(224, 222, 244, 0.06);
+  --progress-bg: rgba(224, 222, 244, 0.12);
+  --c-backdrop: rgba(0, 0, 0, 0.45);
+}
